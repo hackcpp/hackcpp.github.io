@@ -1,4 +1,4 @@
-import{_ as n,c as s,o as a,a as p}from"./app-Djey1-ik.js";const e={},t=p(`<h2 id="线程创建" tabindex="-1"><a class="header-anchor" href="#线程创建"><span>线程创建</span></a></h2><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text" data-title="text"><pre><code><span class="line">// thread example</span>
+import{_ as n,c as s,o as a,a as p}from"./app-BF5pCK0E.js";const e={},t=p(`<h2 id="线程创建" tabindex="-1"><a class="header-anchor" href="#线程创建"><span>线程创建</span></a></h2><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text" data-title="text"><pre><code><span class="line">// thread example</span>
 <span class="line">#include &lt;iostream&gt;       // std::cout</span>
 <span class="line">#include &lt;thread&gt;         // std::thread</span>
 <span class="line"> </span>
