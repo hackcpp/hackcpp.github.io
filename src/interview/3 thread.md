@@ -6,10 +6,14 @@ category:
 tag:
   - c++ 
   - 多线程
+  - 线程同步
 ---
 
-## 线程创建 
-```
+## 如何创建线程？
+
+[C++11](/interview/4%20c++11)引入了[std::thread](https://en.cppreference.com/w/cpp/thread/thread)来创建线程，支持对线程join或者detach。直接看代码：
+
+``` cpp
 // thread example
 #include <iostream>       // std::cout
 #include <thread>         // std::thread
@@ -41,10 +45,13 @@ int main()
 }
 ```
 
+上述代码中，函数 $foo()$ 和 $bar(0)$ 分别运行在线程对象 $first$ 和 $second$ 中，从刚创建对象开始就会新建一个线程用于执行函数，调用 $join()$ 函数将会阻塞主线程，直到线程函数执行结束，线程函数的返回值将会被忽略。如果不希望线程被阻塞执行，可以调用线程对象的 $detach()$ 函数，表示将线程和线程对象分离，新的线程与主线程没有任何关联，线程资源在任务结束后会由操作系统自动回收。
+
+如果没有调用 $join()$ 或者 $detach()$ 函数，假如线程函数执行时间较长，此时线程对象的生命周期结束调用析构函数清理资源，这时可能会发生crash，这里有两种解决办法，一个是调用 $join()$，保证线程函数的生命周期和线程对象的生命周期相同，另一个是调用 $detach()$，将线程和线程对象分离，这里需要注意，如果线程已经和对象分离，那我们就再也无法控制线程什么时候结束了，不能再通过join来等待线程执行完成。
+
 ## 线程同步机制 
 
-
-### 1. 互斥量 (Mutex)
+### 1. [互斥量 (Mutex)](https://en.cppreference.com/w/cpp/thread/mutex)
 
 **实现原理**：
 
@@ -88,7 +95,7 @@ int main() {
 }
 ```
 
-### 2. 读写锁 (Shared Mutex)
+### 2. [读写锁 (Shared Mutex)](https://en.cppreference.com/w/cpp/thread/shared_mutex)
 
 **实现原理**：
 
@@ -149,7 +156,7 @@ int main() {
 }
 ```
 
-### 3. 条件变量 (Condition Variable)
+### 3. [条件变量 (Condition Variable)](https://en.cppreference.com/w/cpp/thread/condition_variable)
 
 **实现原理**：
 
@@ -211,7 +218,7 @@ int main() {
 **使用场景**：
 - 条件变量常用于线程之间的协调，例如在生产者-消费者模型中，生产者线程通知消费者线程有新数据可用，消费者线程等待该通知。
 
-### 4. 原子操作 (Atomic Operations)
+### 4. [原子操作 (Atomic Operations)](https://en.cppreference.com/w/cpp/atomic/atomic)
 
 **实现原理**：
 
@@ -257,7 +264,7 @@ int main() {
 **使用场景**：
 - 原子操作适用于需要高效并发访问的场景，如计数器、标志位等，避免使用锁机制带来的开销。
 
-### 5. 信号量 (Semaphore)
+### 5. [信号量 (Semaphore)](https://en.cppreference.com/w/cpp/thread#Semaphores)
 
 **实现原理**：
 
@@ -358,7 +365,7 @@ int main() {
 **使用场景**：
 - 自旋锁适用于锁定时间非常短的场景，例如在中断上下文或需要避免线程调度开销的情况下使用。
 
-### 7. 屏障 (Barrier)
+### 7. [屏障 (Barrier)](https://en.cppreference.com/w/cpp/thread/barrier)
 
 **实现原理**：
 
@@ -401,7 +408,7 @@ int main() {
 **使用场景**：
 - 屏障适用于并行计算中需要同步多个线程的场景，例如在每个计算步骤完成后同步所有线程。
 
-### 8. 锁存器 (Latch)
+### 8. [锁存器 (Latch)](https://en.cppreference.com/w/cpp/thread/latch)
 
 **实现原理**：
 
@@ -446,6 +453,21 @@ int main() {
 
 **使用场景**：
 - 锁存器适用于需要等待一组线程或任务完成后才能继续执行的场景，例如初始化任务完成后启动主任务。
+
+## 死锁
+
+- 死锁的四个条件(循环等待不可抢占的互斥资源):
+
+1. 禁止抢占(no preemption)：系统资源不能被强制从一个进程(线程)中退出，已经获得的资源在未使用完之前不能被抢占。
+2. 等待和保持(hold and wait)：一个进程(线程)因请求资源阻塞时，对已获得的资源保持不放。
+3. 互斥(mutual exclusion)：资源只能同时分配给一个进程(线程)，无法多个进程(线程)共享。
+4. 循环等待(circular waiting)：一系列进程(线程)互相持有其他进程(线程)所需要的资源。
+
+- 死锁问题的排查
+
+1. [参考 1](https://www.jianshu.com/p/858a2ff19178)
+
+2. [参考 2](https://network.51cto.com/art/202008/623760.htm)
 
 ## 无锁编程
 无锁编程（Lock-Free Programming）是一种在多线程环境中实现并发访问的技术，目的是避免传统锁机制（如互斥锁）带来的性能开销和死锁风险。无锁编程主要依赖于原子操作和内存序列模型，以确保在没有锁的情况下实现线程安全。
@@ -664,7 +686,7 @@ int main() {
    - 两个线程同时运行，生产者插入数据，消费者取出数据，并输出相应的信息。
    - 最后，通过 `join()` 等待线程完成，确保主线程在两个子线程结束后才退出。
 
-### 5. 内存顺序的选择
+### 5. [内存顺序（Memory Order）](https://en.cppreference.com/w/cpp/atomic/memory_order)
 
 - **`memory_order_relaxed`**：用于没有数据依赖的地方，只要求操作是原子的，不需要同步内存顺序。适用于 `load` 和 `store`，如 `tail.load(std::memory_order_relaxed)`。
 - **`memory_order_acquire`**：用于加载操作，以确保加载的结果及其后续的操作不会被重排序到 `acquire` 之前。适用于检查队列是否满或空，如 `head.load(std::memory_order_acquire)`。

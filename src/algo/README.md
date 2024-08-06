@@ -1,7 +1,7 @@
 ---
-title: 数据结构与算法
+title: 数据结构
 index: false
-icon: book
+icon: database
 category:
   - 数据结构
 ---

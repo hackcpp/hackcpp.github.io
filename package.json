@@ -12,9 +12,16 @@
   },
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.14",
-    "vue": "^3.4.31",
+    "katex": "^0.16.11",
+    "markmap-lib": "^0.17.0",
+    "markmap-toolbar": "^0.17.0",
+    "markmap-view": "^0.17.0",
+    "mermaid": "^10.9.1",
+    "reveal.js": "^5.1.0",
+    "vue": "^3.4.35",
     "vuepress": "2.0.0-rc.14",
-    "vuepress-plugin-search-pro": "^2.0.0-rc.52",
+    "vuepress-plugin-md-enhance": "^2.0.0-rc.52",
+    "vuepress-plugin-search-pro": "2.0.0-rc.52",
     "vuepress-theme-hope": "2.0.0-rc.52"
   }
 }

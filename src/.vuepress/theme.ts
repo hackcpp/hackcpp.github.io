@@ -4,18 +4,19 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
-  //hostname: "https://vuepress-theme-hope-docs-demo.netlify.app",
+  hostname: "https://hackcpp.github.io/",
 
   author: {
-    name: "lucas-hliu",
-    url: "https://github.com/lucas-hliu",
+    name: "hackcpp",
+    url: "https://github.com/hackcpp",
+    email: "liuheng2015@gmail.com",
   },
 
   iconAssets: "fontawesome-with-brands",
 
   logo: "/logo.png",
 
-  repo: "https://github.com/lucas-hliu/lucas-hliu.github.io",
+  repo: "https://github.com/hackcpp/hackcpp.github.io",
 
   docsDir: "src",
   editLink: false,
@@ -42,7 +43,10 @@ export default hopeTheme({
 
   // 在这里配置主题提供的插件
   plugins: {
-    // searchPro: true,
+    sitemap: true,
+    searchPro: true,
+    seo: true,
+    // watermark: true,
     // 注意: 仅用于测试! 你必须自行生成并在生产环境中使用自己的评论服务
     // comment: {
     //   provider: "Giscus",
@@ -104,28 +108,31 @@ export default hopeTheme({
       // gfm: true,
 
       // 在启用之前安装 katex
-      // katex: true,
+      katex: true,
 
       // 在启用之前安装 mathjax-full
       // mathjax: true,
 
       // 在启用之前安装 mermaid
-      // mermaid: true,
+      mermaid: true,
 
       // playground: {
       //   presets: ["ts", "vue"],
       // },
 
       // 在启用之前安装 reveal.js
-      // revealJs: {
-      //   plugins: ["highlight", "math", "search", "notes", "zoom"],
-      // },
+      revealJs: {
+        plugins: ["highlight", "math", "search", "notes", "zoom"],
+      },
 
       // 在启用之前安装 @vue/repl
       // vuePlayground: true,
 
       // install sandpack-vue3 before enabling it
       // sandpack: true,
+      markmap: true,
+      // 在启用之前安装 vuepress-plugin-zooming
+      // zooming: true,
     },
 
     // 如果你需要 PWA。安装 @vuepress/plugin-pwa 并取消下方注释
