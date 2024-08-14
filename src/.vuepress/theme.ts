@@ -73,6 +73,7 @@ export default hopeTheme({
       imgSize: true,
       include: true,
       mark: true,
+      //支持类图，状态图等
       plantuml: true,
       spoiler: true,
       stylize: [
@@ -103,18 +104,20 @@ export default hopeTheme({
       // echarts: true,
 
       // 在启用之前安装 flowchart.ts
-      // flowchart: true,
+      // 支持流程图
+      flowchart: true,
 
       // gfm requires mathjax-full to provide tex support
       // gfm: true,
 
-      // 在启用之前安装 katex
+      // 在启用之前安装 katex 支持Tex 语法
       katex: true,
 
       // 在启用之前安装 mathjax-full
       // mathjax: true,
 
       // 在启用之前安装 mermaid
+      // 状态图等
       mermaid: true,
 
       // playground: {
@@ -122,6 +125,7 @@ export default hopeTheme({
       // },
 
       // 在启用之前安装 reveal.js
+      // 代码语法高亮
       revealJs: {
         plugins: ["highlight", "math", "search", "notes", "zoom"],
       },
@@ -131,6 +135,7 @@ export default hopeTheme({
 
       // install sandpack-vue3 before enabling it
       // sandpack: true,
+      // 在启用之前安装 markmap-lib markmap-toolbar markmap-view 支持思维导图
       markmap: true,
       // 在启用之前安装 vuepress-plugin-zooming
       // zooming: true,
