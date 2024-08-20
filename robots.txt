@@ -1,4 +1,6 @@
+Sitemap: https://hackcpp.github.io/sitemap.xml
 
+User-agent: *
 User-agent:*
 Disallow:
 
