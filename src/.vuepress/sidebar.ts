@@ -48,6 +48,8 @@ export default sidebar({
         "5 bridge_pattern.md",
         "6 factory_pattern.md",
         "7 chain_of_responsibility_pattern.md",
+        "8 mvvm.md",
+        "9 model_view_in_qt.md",
       ],
     },
     {

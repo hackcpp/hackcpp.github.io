@@ -26,6 +26,7 @@ editLink: false
 - [数组与链表](/algo/1%20array_and_list)
 - [队列与栈](/algo/2%20queue_and_stack)
 - [哈希表](/algo/3%20hash_map)
+- [二叉树](/algo/4%20tree)
   
 ### 架构设计
 - [设计原则](/design/1%20design_patterns)  
@@ -34,6 +35,7 @@ editLink: false
 - [装饰器模式](/design/4%20decorator_pattern)
 - [桥接模式](/design/5%20bridge_pattern)
 - [工厂模式](/design/6%20factory_pattern)
+- [责任链模式](/design/7%20chain_of_responsibility_pattern)
 
 
 ### 其他
