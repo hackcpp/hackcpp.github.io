@@ -47,6 +47,7 @@ export default sidebar({
         "4 decorator_pattern.md",
         "5 bridge_pattern.md",
         "6 factory_pattern.md",
+        "7 chain_of_responsibility_pattern.md",
       ],
     },
     {
@@ -55,10 +56,10 @@ export default sidebar({
       icon: "folder",
       prefix: "other/",
       link: "other/",
-      children: [
-        "1 linux_commands.md",
-        "2 encrypt_string.md",
-      ],
+      // children: [
+      //   "1 linux_commands.md",
+      //   "2 encrypt_string.md",
+      // ],
     },
   ],
 });

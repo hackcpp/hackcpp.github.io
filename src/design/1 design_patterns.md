@@ -15,7 +15,7 @@ editLink: false
 **设计模式**是解决常见软件设计问题的通用解决方案。它们分为三大类：
 1. **创建型模式**：关注对象创建，如单例模式、[工厂模式](/design/6%20factory_pattern)。
 2. **结构型模式**：关注对象组合，如[装饰器模式](/design/4%20decorator_pattern)、[桥接模式](/design/5%20bridge_pattern)，组合模式。
-3. **行为型模式**：关注对象间通信，如[观察者模式](/design/2%20observer_pattern)、[策略模式](/design/3%20strategy_pattern)。
+3. **行为型模式**：关注对象间通信，如[观察者模式](/design/2%20observer_pattern)、[策略模式](/design/3%20strategy_pattern), [责任链模式](/design/7%20chain_of_responsibility_pattern)。
 
 ### 设计原则
 

@@ -87,7 +87,7 @@ protected:
     }
 };
 
-//策略模式, 将波形绘制配置的设置逻辑抽象出来，由子类实现具体绘制配置的设置逻辑
+//策略模式, 将波形绘制配置的初始化逻辑抽象出来，由子类实现具体的设置逻辑
 class WaveStyle {
     public:
     virtual void initDrawOption(DrawOption& op) const = 0;
@@ -109,13 +109,13 @@ class LightWaveStyle : public WaveStyle {
 class Cavas {
 public:
     void drawWaves() {
-        auto waves = getwaves();
+        auto& waves = getWaves();
         //策略模式
         for (auto& wave : waves) {
            DrawOption op;// 绘制参数 color, width, ...
-           //根据装载的mStyle 初始化op
+           //根据装载的mStyle 初始化绘制参数op
            mstlye->initDrawOption(op);
-           wave.draw(op);
+           wave->draw(op);
         } 
     }
     void setWaveStyle(WaveStyle* style) {

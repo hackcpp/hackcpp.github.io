@@ -6,11 +6,11 @@
 ### 如何使用
 - clone 仓库
 ``` shell
-  git clone git@github.com:lucas-hliu/lucas-hliu.github.io.git /path/to/targetdir
+  git clone git@github.com:hackcpp/hackcpp.github.io.git /path/to/targetdir
 ```
 - 进到目录，执行 `npm install` 安装依赖。
 - 调试运行，执行 `npm run docs:dev`
 - build 文档，执行 `npm run docs:build`
   
 ### 问题反馈
-- 欢迎提交 [issue](https://github.com/lucas-hliu/lucas-hliu.github.io/issues)，或者直接提 [pr](https://github.com/lucas-hliu/lucas-hliu.github.io/pulls)。
+- 欢迎提交 [issue](https://github.com/hackcpp/hackcpp.github.io/issues)，或者直接提 [pr](https://github.com/hackcpp/hackcpp.github.io/pulls)。
