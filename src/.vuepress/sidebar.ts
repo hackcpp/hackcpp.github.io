@@ -54,6 +54,18 @@ export default sidebar({
     },
     {
       collapsible: true,
+      text: "工具箱",
+      icon: "toolbox",
+      prefix: "tools/",
+      link: "tools/",
+      children: [
+        "1 git.md",
+        "2 cmake.md",
+        "3 gdb.md"
+      ],
+    },
+    {
+      collapsible: true,
       text: "其他",
       icon: "folder",
       prefix: "other/",

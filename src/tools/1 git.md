@@ -1,8 +1,8 @@
 ---
-title: git 常用命令
+title: git 基本使用
 order: 2
 category:
-  - 其他
+  - 工具
 tag:
   - git
 editLink: false
@@ -10,11 +10,9 @@ editLink: false
 
 Git 是最常用的版本控制工具之一，广泛用于开发和项目管理中。以下是一些常用的 Git 命令及其详细说明：
 
-## 常用 Git 命令及其说明
+## repository 操作 
 
-### repository 操作 
-
-1. **git init**
+### 1. **git init**
 - **作用**：本地初始化一个新的 Git 仓库。
 - **用法**：在一个空目录中运行 `git init`，Git 会创建一个 `.git` 目录，用于存储仓库的元数据。
   
@@ -22,7 +20,7 @@ Git 是最常用的版本控制工具之一，广泛用于开发和项目管理�
   git init
 ```
 
-2. **git clone**
+### 2. **git clone**
 - **作用**：从远程仓库克隆一个仓库到本地。
 - **用法**：`git clone` 后跟仓库 URL，可以将远程仓库复制到本地。
 
@@ -30,7 +28,7 @@ Git 是最常用的版本控制工具之一，广泛用于开发和项目管理�
   git clone https://github.com/user/repository.git
 ```
 
-3. **git remote**
+### 3. **git remote**
 - **作用**：管理远程仓库地址。
 - **用法**：
   - 查看当前的远程仓库：`git remote -v`
@@ -307,3 +305,7 @@ Git Submodule 是一个非常有用的功能，允许你在一个 Git 仓库中�
 Git Submodule 是在大型项目或多仓库项目中非常有用的功能，可以让你更好地组织代码。通过上述命令，你可以轻松地添加、更新、管理和删除子模块。掌握这些操作将帮助你有效地管理项目依赖关系和模块化代码结构。
 :::
 
+## 参考资料
+- [git 官方文档](https://git-scm.com/book/zh/v2)
+- [在线学习git](https://learngitbranching.js.org/?locale=zh_CN)
+- [git 在线文档](https://www.progit.cn/)
