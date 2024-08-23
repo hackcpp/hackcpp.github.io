@@ -24,14 +24,15 @@ editLink: false
 
 ### `.gdbinit` 文件的常见位置
 
-- **用户主目录下的 `.gdbinit`**：位于用户主目录（如 `/home/username/.gdbinit` 或 `C:\Users\username\.gdbinit`）的文件是全局的 GDB 初始化文件，适用于所有 GDB 会话。它在每次启动 GDB 时都会被自动加载。
+- **用户主目录下的 `.gdbinit`**：位于用户主目录`/home/username/.gdbinit` 的文件是全局的 GDB 初始化文件，适用于所有 GDB 会话。它在每次启动 GDB 时都会被自动加载。
   
 - **当前目录下的 `.gdbinit`**：位于当前工作目录的 `.gdbinit` 文件仅在当前目录中启动 GDB 时生效。这个文件常用于为特定项目或代码库定制调试环境。
 
-GDB 会按照以下顺序加载 `.gdbinit` 文件：
+::: tip 加载顺序
 1. 系统全局的 GDB 初始化文件（通常位于 `/etc/gdb/gdbinit`）。
 2. 用户主目录中的 `.gdbinit` 文件。
 3. 当前目录中的 `.gdbinit` 文件。
+:::
 
 可以通过启动 GDB 时使用 `-nx` 或 `-n` 选项来禁止加载这些文件：
 - `gdb -n`：不加载系统全局的 `.gdbinit` 文件。
@@ -88,7 +89,7 @@ end
 
 这个示例定义了一个名为 `hook-stop` 的函数，该函数会在每次程序停止时自动执行，打印当前的程序计数器（PC）的值。
 
-#### 调试插件加载
+#### 加载调试插件
 
 可以通过 `.gdbinit` 文件加载调试插件，如 Python 脚本、Pretty Printers 等。
 
@@ -98,6 +99,14 @@ import sys
 sys.path.insert(0, '/path/to/my/pretty_printers')
 from my_pretty_printers import register_printers
 register_printers (gdb.current_objfile ())
+end
+
+# 加载stdcxx pretty priters
+python
+import sys
+sys.path.insert(0, '/usr/share/gcc/python')
+from libstdcxx.v6.printers import register_libstdcxx_printers
+register_libstdcxx_printers(gdb.current_objfile())
 end
 ```
 

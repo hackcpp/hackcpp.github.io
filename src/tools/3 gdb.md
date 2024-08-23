@@ -189,3 +189,4 @@ GDB 是一个功能强大的调试工具，可以帮助开发者深入分析和�
 
 ## 参考
 - [参考文档](https://sourceware.org/gdb/current/onlinedocs/gdb.html/)
+- [GDB配置](/tools/4%20gdbinit)
