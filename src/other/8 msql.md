@@ -1,11 +1,11 @@
 ---
-title: mysql 的基本使用
+title: MySQL 的基本使用
 order: 2
 category:
   - 其他
 tag:
-  - mysql
-  - sql
+  - MySQL
+  - SQL
 editLink: false
 ---
 
