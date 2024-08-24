@@ -7,15 +7,18 @@ export default hopeTheme({
   hostname: "https://hackcpp.github.io/",
 
   blog: {
+    avatar: "/avatar.png",
+    name: "Mr.Hackcpp",
+    description: "10年 C++ 程序猿，学习记录, 技术分享。",
+    intro: "/portfolio.html",
     medias: {
       github: "https://github.com/hackcpp",
     },
   },
 
   author: {
-    name: "hackcpp",
-    url: "https://github.com/hackcpp",
-    email: "liuheng2015@gmail.com",
+    name: "Mr.Hackcpp",
+    url: "/portfolio.html",
   },
 
   iconAssets: "fontawesome-with-brands",
