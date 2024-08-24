@@ -6,6 +6,13 @@ import sidebar from "./sidebar.js";
 export default hopeTheme({
   hostname: "https://hackcpp.github.io/",
 
+  blog: {
+    medias: {
+      github: "https://github.com/hackcpp",
+      Gmail: "mailto:liuheng2015@gmail.com",
+    },
+  },
+
   author: {
     name: "hackcpp",
     url: "https://github.com/hackcpp",
@@ -44,6 +51,7 @@ export default hopeTheme({
 
   // 在这里配置主题提供的插件
   plugins: {
+    blog: true,
     sitemap: true,
     searchPro: true,
     seo: true,
