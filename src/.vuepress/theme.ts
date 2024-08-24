@@ -9,7 +9,6 @@ export default hopeTheme({
   blog: {
     medias: {
       github: "https://github.com/hackcpp",
-      Gmail: "mailto:liuheng2015@gmail.com",
     },
   },
 
