@@ -8,6 +8,9 @@ tag:
   - hash
   - 哈希表
 editLink: false
+description: "非线性数据结构，哈希表(hash table)"
+star: 903
+sticky: 903
 ---
 
 ## 哈希表

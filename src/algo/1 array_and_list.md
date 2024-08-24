@@ -9,6 +9,9 @@ tag:
   - 数组
   - 链表
 editLink: false
+description: "线性数据结构，数组(array)与链表(list)"
+star: 901
+sticky: 901
 ---
 
 ## 数组

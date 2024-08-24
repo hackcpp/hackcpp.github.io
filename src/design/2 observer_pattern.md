@@ -9,7 +9,9 @@ tag:
   - 观察者模式
   - 事件模式
 editLink: false
-star: true
+description: "行为型设计模式，观察者模式（Observer Pattern）"
+star: 801
+sticky: 801
 ---
 
 ### 概述

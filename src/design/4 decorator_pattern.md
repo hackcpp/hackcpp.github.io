@@ -8,6 +8,9 @@ tag:
   - 设计模式
   - 装饰器模式
 editLink: false
+description: "结构型设计模式，装饰器模式（Decorator Pattern）"
+star: 803
+sticky: 803
 ---
 
 ### 概述

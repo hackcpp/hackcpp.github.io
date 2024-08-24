@@ -8,6 +8,9 @@ tag:
   - 设计模式
   - 策略模式
 editLink: false
+description: "行为型设计模式，策略模式（Strategy Pattern）"
+star: 802
+sticky: 802
 ---
 ### 概述
 

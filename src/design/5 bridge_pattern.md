@@ -8,6 +8,9 @@ tag:
   - 设计模式
   - 桥接模式
 editLink: false
+description: "结构型设计模式，桥接模式（Bridge Pattern）"
+star: 804
+sticky: 804
 ---
 
 
