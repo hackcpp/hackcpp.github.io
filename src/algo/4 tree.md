@@ -7,7 +7,7 @@ tag:
   - c++
   - 二叉树
 editLink: false
-description: "非线性数据结构，二叉树（binary tree"
+description: "非线性数据结构，二叉树（binary tree）"
 star: 904
 sticky: 904
 ---

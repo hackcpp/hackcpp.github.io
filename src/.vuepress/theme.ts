@@ -9,7 +9,7 @@ export default hopeTheme({
   blog: {
     avatar: "/avatar.png",
     name: "Mr.Hackcpp",
-    description: "10年 C++ 程序猿，学习记录, 技术分享。",
+    description: "90后 C++ 程序猿, 学习记录, 技术分享, 编程笔记, 数据结构与算法, 程序架构设计",
     intro: "/portfolio.html",
     medias: {
       github: "https://github.com/hackcpp",
@@ -23,7 +23,7 @@ export default hopeTheme({
 
   iconAssets: "fontawesome-with-brands",
 
-  logo: "/logo.png",
+  logo: "/logo.jpeg",
 
   repo: "https://github.com/hackcpp/hackcpp.github.io",
 
