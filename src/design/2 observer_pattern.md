@@ -9,6 +9,7 @@ tag:
   - 观察者模式
   - 事件模式
 editLink: false
+star: true
 ---
 
 ### 概述
