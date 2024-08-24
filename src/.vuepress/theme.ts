@@ -13,19 +13,19 @@ export default hopeTheme({
     intro: "/portfolio.html",
     medias: {
       github: "https://github.com/hackcpp",
-      // // 知识星球
-      // zsxq: {
-      //     // 图标地址
-      //   icon: "https://hackcpp.github.io/zsxq.ico",
-      //   // 链接
-      //   link: "https://t.zsxq.com/JUsFY",
-      // },
-      // gzh: {
-      //   // 图标地址
-      //   icon: "https://hackcpp.github.io/gzh.ico",
-      //   // 链接
-      //   link: "https://t.zsxq.com/JUsFY",
-      // },
+      // 知识星球
+      zsxq: {
+          // 图标地址
+        icon: "https://hackcpp.github.io/zsxq.ico",
+        // 链接
+        link: "https://t.zsxq.com/JUsFY",
+      },
+      gzh: {
+        // 图标地址
+        icon: "https://hackcpp.github.io/gzh.ico",
+        // 链接
+        link: "https://t.zsxq.com/JUsFY",
+      },
     },
   },
 
