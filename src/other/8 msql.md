@@ -407,3 +407,7 @@ LIMIT 5;
 - **数据库操作**：创建、选择、查看和删除数据库。
 - **表操作**：创建、修改、查看和删除表，以及重命名表。
 - **数据行操作**：插入、查询、更新和删除表中的数据行，以及对数据进行统计。
+
+## 参考
+[官方文档](https://dev.mysql.com/doc/refman/8.4/en/sql-statements.html)
+[入门教程](https://www.w3schools.com/mysql/mysql_sql.asp)
