@@ -24,7 +24,7 @@ export default hopeTheme({
         // 图标地址
         icon: "https://hackcpp.github.io/gzh.ico",
         // 链接
-        link: "https://t.zsxq.com/JUsFY",
+        link: "https://mp.weixin.qq.com/s/xtnDZAPQGdlQFacIjM5qdQ",
       },
     },
   },

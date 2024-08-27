@@ -23,6 +23,8 @@ sticky: 802
 
 ### 示例
 
+下面是一个用C++实现的商品计算折扣的策略模式事例。这个示例模拟了不同折扣率下商品价格的计算。
+
 @startuml 类图
 abstract class DiscountStrategy {
 +{abstract} virtual double calculate(double price) const

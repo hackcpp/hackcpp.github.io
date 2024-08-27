@@ -28,6 +28,8 @@ sticky: 805
 
 ### 示例
 
+下面是一个用 C++ 实现的请假流程处理的责任链模式示例。这个示例模拟了请假请求根据天数由不同级别的领导审批的场景。
+
 @startuml 类图
 abstract class ILeveHandler {
 +void setNextHandler(ILeveHandler* handler)
@@ -52,8 +54,6 @@ class DirectorHandler {
 }
 
 @enduml
-
-下面是一个用 C++ 实现的请假流程处理的责任链模式示例。这个示例模拟了请假请求根据天数由不同级别的领导审批的场景。
 
 ```cpp
 #include <iostream>

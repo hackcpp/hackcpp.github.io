@@ -29,6 +29,8 @@ sticky: 801
 
 ### 示例
 
+​下面以一个文件分割器的实现模拟观察者模式。示例中 GUI 类 `MainForm` 通过实现`IProgress` 接口监听文件分割处理的进度。
+
 @startuml 类图
 abstract class IProgress {
 +{abstract} virtual void DoProgress(float value)
