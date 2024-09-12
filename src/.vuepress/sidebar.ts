@@ -59,6 +59,7 @@ export default sidebar({
       prefix: "tools/",
       link: "tools/",
       children: [
+        "0 tool_box.md",
         "1 git.md",
         "2 cmake.md",
         "3 gdb.md"

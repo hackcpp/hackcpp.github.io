@@ -30,18 +30,22 @@ export default navbar([
       {
         text: "Compiler Explorer",
         link: "https://godbolt.org/",
+        icon: "https://godbolt.org/favicon.ico",
       },
       {
         text: "Cpp Insight",
         link: "https://cppinsights.io/",
+        icon: "https://cppinsights.io/favicon.ico",
       },
       {
         text: "Visualize Code",
         link: "https://pythontutor.com/render.html#mode=display",
+        icon: "https://pythontutor.com/favicon.ico",
       },
       {
         text: "Cpp Reference",
         link: "https://en.cppreference.com/w/",
+        icon: "https://en.cppreference.com/favicon.ico",
       },
     ]
   },
