@@ -25,7 +25,7 @@ head:
 2. **具体策略类**：实现策略接口的不同算法。
 3. **上下文类**：持有一个策略对象，并在运行时决定使用哪种策略。
 
-### 示例
+### [示例](https://github.com/hackcpp/cplusplus/blob/main/source%20code/design_pattern/strategy.cpp)
 
 下面是一个用C++实现的商品计算折扣的策略模式事例。这个示例模拟了不同折扣率下商品价格的计算。
 
@@ -58,6 +58,7 @@ class SeasonalDiscount {
 class DiscountStrategy {
 public:
     virtual double calculate(double price) const = 0;
+    virtual ~DiscountStrategy() {}
 };
 
 // 具体策略

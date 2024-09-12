@@ -31,7 +31,7 @@ head:
 3. **具体主题（Concrete Subject）**：实现主题接口，维护一个具体的状态。当状态改变时，会通知所有观察者。
 4. **具体观察者（Concrete Observer）**：实现观察者接口，负责在接收到主题的通知后进行相应的更新操作。
 
-### 示例
+### [示例](https://github.com/hackcpp/cplusplus/blob/main/source%20code/design_pattern/decorator.cpp)
 
 ​下面以一个文件分割器的实现模拟观察者模式。示例中 GUI 类 `MainForm` 通过实现`IProgress` 接口监听文件分割处理的进度。
 

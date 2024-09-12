@@ -8,9 +8,13 @@ tag:
   - 设计模式
   - 装饰器模式
 editLink: false
-description: "结构型设计模式，装饰器模式（Decorator Pattern）"
+description: "结构型设计模式，装饰器模式（Decorator Pattern）通过将对象放入包含行为的特殊封装对象中，来为原始对象提供新的行为,使得我们可以在不改变原始类代码的情况下，动态地添加新的功能."
 star: 803
 sticky: 803
+head:
+  - - meta
+    - name: keywords
+      content: 设计模式 装饰器模式 结构型设计模式 Decorator Pattern
 ---
 
 ### 概述
@@ -28,7 +32,7 @@ sticky: 803
 3. **装饰器类（Decorator）**：实现组件接口，并持有一个组件对象的引用。这个类是装饰器模式的核心，通过在方法中调用组件对象的方法，实现功能的叠加。
 4. **具体装饰器（Concrete Decorator）**：继承装饰器类，具体实现要添加的功能。
 
-### 示例
+### [示例](https://github.com/hackcpp/cplusplus/blob/main/source%20code/design_pattern/decorator.cpp)
 
 @startuml 类图
 abstract class Stream {
@@ -79,7 +83,7 @@ class Stream {
 
 class FileStream: public Stream {
     public:
-    std::string read() ovverride {
+    std::string read() override {
         std::cout << "FileStream::read" << std::endl;
         return "";
     }
@@ -104,7 +108,7 @@ class MemoryStream: public Stream {
 class BufferedStream: public Stream {
     public:
     BufferedStream(Stream* s): mSteam(s) {}
-    virtual std::string read() ovverride {
+    virtual std::string read() override {
         //..buffer
         return DoBuffer(mSteam->read());
     }

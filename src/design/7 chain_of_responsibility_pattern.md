@@ -8,8 +8,12 @@ tag:
   - 设计模式
   - 责任链模式
 editLink: false
-description: "行为型设计模式，责任链模式（Chain of Responsibility Pattern）"
+description: "行为型设计模式，责任链模式（Chain of Responsibility Pattern）允许多个对象都有机会处理请求，从而避免请求的发送者和接收者之间的耦合。该模式将这些对象连成一条链，并沿着这条链传递请求，直到有对象处理它为止"
 sticky: 805
+head:
+  - - meta
+    - name: keywords
+      content: 设计模式 责任链模式 行为型设计模式 Chain of Responsibility Pattern
 ---
 
 ### 概述
@@ -26,7 +30,7 @@ sticky: 805
 - **具体处理者（Concrete Handler）**：实现了处理者接口，负责处理具体的请求。
 - **请求**：需要沿着责任链传递的请求。
 
-### 示例
+### [示例](https://github.com/hackcpp/cplusplus/blob/main/source%20code/design_pattern/chain_of_responsibility.cpp)
 
 下面是一个用 C++ 实现的请假流程处理的责任链模式示例。这个示例模拟了请假请求根据天数由不同级别的领导审批的场景。
 
@@ -92,7 +96,7 @@ public:
 // Manager 处理类
 class ManagerHandler : public LeaveHandler {
 public:
-    void handleRequest(int days) override {
+    bool handleRequest(int days) override {
         if (days > 3 && days <= 7) {
             std::cout << "Manager approved " << days << " days leave." << std::endl;
             return true;
@@ -107,7 +111,7 @@ public:
 // Director 处理类
 class DirectorHandler : public LeaveHandler {
 public:
-    void handleRequest(int days) override {
+    bool handleRequest(int days) override {
         if (days > 7) {
             std::cout << "Director approved " << days << " days leave." << std::endl;
             return true;

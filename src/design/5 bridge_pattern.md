@@ -8,9 +8,13 @@ tag:
   - 设计模式
   - 桥接模式
 editLink: false
-description: "结构型设计模式，桥接模式（Bridge Pattern）"
+description: "结构型设计模式，桥接模式（Bridge Pattern）将抽象部分与实现部分分离，使它们可以独立地变化。桥接模式通过将类的功能层次与实现层次分离，使得系统更具扩展性和灵活性"
 star: 804
 sticky: 804
+head:
+  - - meta
+    - name: keywords
+      content: 设计模式 桥接模式 结构型设计模式 Bridge Pattern
 ---
 
 
@@ -27,7 +31,7 @@ sticky: 804
 3. **实现类接口（Implementor）**：定义实现类的接口，但不提供具体实现。实现类接口与抽象类没有继承关系。
 4. **具体实现类（Concrete Implementor）**：实现实现类接口，提供具体的实现逻辑。
 
-### 示例
+### [示例](https://github.com/hackcpp/cplusplus/blob/main/source%20code/design_pattern/bridge.cpp)
 
 @startuml 类图
 abstract class Color {
