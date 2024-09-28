@@ -10,7 +10,7 @@ export default sidebar({
     },
     {
       collapsible: true,
-      text: "面试集锦",
+      text: "编程语言",
       icon: "laptop-code",
       prefix: "interview/",
       link: "interview/",
