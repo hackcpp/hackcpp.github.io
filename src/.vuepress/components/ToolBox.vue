@@ -1,8 +1,14 @@
 <template>
     <div >
-      <div class="card-container">
+      <div class="card-container"
+      v-for="(category, index) in categories"
+      :key="index"
+      >
+        <h2 class="title">{{category.name}}</h2>
+        <br>
+
         <div
-          v-for="(tool, index) in tools"
+          v-for="(tool, index) in category.tools"
           :key="index"
           class="card"
           @click="openLink(tool.link)"
@@ -24,6 +30,9 @@
     name: 'ToolBox',
     data() {
       return {
+        categories: [
+        {
+        name: '编程工具',    
         tools: [
           {
             title: 'Compiler Explorer',
@@ -49,6 +58,21 @@
             logo: 'https://app.diagrams.net/favicon.ico',
             link: 'https://app.diagrams.net/',
          },
+         {
+            title: 'Regulex',
+            desc: '正则表达式可视化工具',
+            logo: 'https://jex.im/favicon.ico',
+            link: 'https://jex.im/regulex/',
+         },
+         {
+            title: 'Visualgo',
+            desc: '算法可视化工具',
+            logo: 'https://visualgo.net/img/favicon.png',
+            link: 'https://visualgo.net',
+         },
+         
+        ]
+        }
         ]
       };
     },
