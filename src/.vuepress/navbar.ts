@@ -2,7 +2,8 @@ import { navbar } from "vuepress-theme-hope";
 
 export default navbar([
   "/",
-  "/interview/",
+  "/coding/",
+  "/improve/",
   "/algo/",
   "/design/",
   {

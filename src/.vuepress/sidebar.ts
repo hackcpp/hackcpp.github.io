@@ -12,13 +12,28 @@ export default sidebar({
       collapsible: true,
       text: "编程语言",
       icon: "laptop-code",
-      prefix: "interview/",
-      link: "interview/",
+      prefix: "coding/",
+      link: "coding/",
       children: [
-        "1 c++basic.md",
-        "2 process.md",
-        "3 thread.md",
-        "4 c++11.md",
+        {
+          collapsible: true,
+          text: "c++编程",
+          prefix: "cpp/",
+          link: "cpp/",
+          children: [
+            "01 fundamental_types.md",
+            "02 enumerations.md"
+          ],
+        },
+      ],
+    },
+    {
+      collapsible: true,
+      text: "进阶之路",
+      icon: "chart-line",
+      prefix: "improve/",
+      link: "improve/",
+      children: [
       ],
     },
     {

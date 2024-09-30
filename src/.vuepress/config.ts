@@ -23,5 +23,14 @@ export default defineUserConfig({
   // 自定义 component
   alias: {
     "@ToolBox": path.resolve(__dirname, "components/ToolBox.vue"),
+    "@ToggleContent": path.resolve(__dirname, "components/ToggleContent.vue"),
+    "@TopToggleContent": path.resolve(__dirname, "components/TopToggleContent.vue"),
+    //"@RowLayout": path.resolve(__dirname, "components/RowLayout.vue"),
+    //"@TopBottomLayout": path.resolve(__dirname, "components/TopBottomLayout.vue"),
+    "@LeftRightLayout": path.resolve(__dirname, "components/LeftRightLayout.vue"),
+    //"@CommentSpan": path.resolve(__dirname, "components/CommentSpan.vue"),
+    //"@CodeBox": path.resolve(__dirname, "components/CodeBox.vue"),
+    "@ColorSpan": path.resolve(__dirname, "components/ColorSpan.vue"),
+
   },
 });

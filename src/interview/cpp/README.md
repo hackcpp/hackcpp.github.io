@@ -1,8 +1,10 @@
 ---
 timeline: false
-title: 编程语言
+title: c++编程
 index: false
-icon: laptop-code
+icon: code
+category:
+  - cpp
 ---
 
 <Catalog />
