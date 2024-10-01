@@ -421,14 +421,15 @@ k = 5;            //  <ColorSpan data="COMPILER ERROR: k is const!" color="red"/
       </template>
       <template v-slot:toggle>
       <pre>
-auto i = 2;                   int           
-auto u = 56u;                 unsigned int       
-auto d = 2.023;               double     
-auto f = 4.01f;               float   
-auto l = -78787879797878l;    long int
-auto x = 0 * i;               x: int
-auto y = i + d;               y: double  
-auto z = f * d;               z: double</pre>
+<strong>auto</strong> i = 2;                   <ColorSpan data="int"/>           
+<strong>auto</strong> u = 56u;                 <ColorSpan data="unsigned int"/>        
+<strong>auto</strong> d = 2.023;               <ColorSpan data="double"/>     
+<strong>auto</strong> f = 4.01f;               <ColorSpan data="float"/>   
+<strong>auto</strong> l = -78787879797878l;    <ColorSpan data="long int"/> 
+<br/>
+<strong>auto</strong> x = 0 * i;               x: <ColorSpan data="int"/> 
+<strong>auto</strong> y = i + d;               y: <ColorSpan data="double"/>   
+<strong>auto</strong> z = f * d;               z: <ColorSpan data="double"/> </pre>
       </template>
     </ToggleContent>
   </template>
