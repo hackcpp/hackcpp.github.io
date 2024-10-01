@@ -22,7 +22,7 @@ export default sidebar({
           link: "cpp/",
           children: [
             "01 fundamental_types.md",
-            "02 enumerations.md"
+            "02 control_flow.md",
           ],
         },
       ],

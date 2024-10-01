@@ -29,7 +29,7 @@ export default defineUserConfig({
     //"@TopBottomLayout": path.resolve(__dirname, "components/TopBottomLayout.vue"),
     "@LeftRightLayout": path.resolve(__dirname, "components/LeftRightLayout.vue"),
     //"@CommentSpan": path.resolve(__dirname, "components/CommentSpan.vue"),
-    //"@CodeBox": path.resolve(__dirname, "components/CodeBox.vue"),
+    "@CodeBox": path.resolve(__dirname, "components/CodeBox.vue"),
     "@ColorSpan": path.resolve(__dirname, "components/ColorSpan.vue"),
 
   },
