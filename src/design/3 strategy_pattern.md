@@ -9,8 +9,7 @@ tag:
   - 策略模式
 editLink: false
 description: "行为型设计模式，策略模式（Strategy Pattern）定义了一系列算法，并将每个算法封装在独立的策略类中，使得它们可以互相替换。策略模式使得算法的变化不会影响到使用算法的客户类"
-star: 802
-sticky: 802
+sticky: 607
 head:
   - - meta
     - name: keywords

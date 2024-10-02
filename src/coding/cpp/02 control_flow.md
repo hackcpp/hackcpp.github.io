@@ -1,10 +1,16 @@
 ---
-title: 执行分支控制
+title: c++ 教程：执行分支控制
 order: 2
 category:
   - cpp教程
 tag:
-  - c++ 
+  - c++
+description: "c++ 中基本的控制语句，if 语句块和三元条件操作符，switch 条件操作符，while 循环和 for 循环。"  
+sticky: 708
+head:
+  - - meta
+    - name: keywords
+      content: c++ Conditional Branching 条件分支 if 语句块 switch 条件操作符三元条件操作符
 ---
 
 <TopToggleContent title="分支结构(Conditional Branching)">

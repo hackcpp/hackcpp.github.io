@@ -9,9 +9,8 @@ tag:
   - 观察者模式
   - 事件模式
 editLink: false
-description: "行为型设计模式，观察者模式（Observer Pattern）定义了一种一对多的依赖关系，让多个观察者对象同时监听某一个主题对象。当主题对象的状态发生变化时，所有依赖于它的观察者对象都会收到通知并自动更新"
-star: 801
-sticky: 801
+description: "行为型设计模式，观察者模式（Observer Pattern）定义了一种一对多的依赖关系，让多个观察者对象同时监听某一个主题对象。当主题对象的状态发生变化时，所有依赖于它的观察者对象都会收到通知并自动更新."
+sticky: 608
 head:
   - - meta
     - name: keywords

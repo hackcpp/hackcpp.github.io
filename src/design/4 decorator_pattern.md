@@ -9,8 +9,7 @@ tag:
   - 装饰器模式
 editLink: false
 description: "结构型设计模式，装饰器模式（Decorator Pattern）通过将对象放入包含行为的特殊封装对象中，来为原始对象提供新的行为,使得我们可以在不改变原始类代码的情况下，动态地添加新的功能."
-star: 803
-sticky: 803
+sticky: 606
 head:
   - - meta
     - name: keywords

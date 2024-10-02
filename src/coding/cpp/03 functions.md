@@ -1,10 +1,16 @@
 ---
-title: 函数
+title: c++ 教程：函数的使用
 order: 2
 category:
   - cpp教程
 tag:
   - c++ 
+description: "c++ 中函数的使用教程，函数定义、返回值等"  
+sticky: 707
+head:
+  - - meta
+    - name: keywords
+      content: c++ function
 ---
 
 <TopToggleContent title="函数定义(Function Declarations)">

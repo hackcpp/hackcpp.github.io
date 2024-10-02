@@ -9,8 +9,7 @@ tag:
   - 队列
 editLink: false
 description: "线性数据结构，队列(queue)与栈(stack)"
-star: 902
-sticky: 902
+sticky: 508
 ---
 
 ## 队列

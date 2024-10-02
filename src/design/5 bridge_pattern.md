@@ -9,8 +9,7 @@ tag:
   - 桥接模式
 editLink: false
 description: "结构型设计模式，桥接模式（Bridge Pattern）将抽象部分与实现部分分离，使它们可以独立地变化。桥接模式通过将类的功能层次与实现层次分离，使得系统更具扩展性和灵活性"
-star: 804
-sticky: 804
+sticky: 605
 head:
   - - meta
     - name: keywords

@@ -9,9 +9,8 @@ tag:
   - 数组
   - 链表
 editLink: false
-description: "线性数据结构，数组(array)与链表(list)"
-star: 901
-sticky: 901
+description: "线性数据结构，数组(array)与链表(list)。数组（array）是一种线性数据结构，其将相同类型的元素存储在连续的内存空间中。我们将元素在数组中的位置称为该元素的索引"
+sticky: 509
 ---
 
 ## 数组

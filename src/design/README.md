@@ -1,5 +1,6 @@
 ---
 timeline: false
+article: false
 title: 架构设计
 index: false
 icon: network-wired

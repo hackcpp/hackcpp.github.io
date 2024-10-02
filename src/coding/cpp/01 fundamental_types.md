@@ -1,10 +1,16 @@
 ---
-title: 基本数据类型
+title: c++ 教程：数据类型
 order: 2
 category:
   - cpp教程
 tag:
-  - c++ 
+  - c++
+description: "基本类型是所有复杂类型/数据结构（如列表、散列表、树、图......）的基本构件。"  
+sticky: 709
+head:
+  - - meta
+    - name: keywords
+      content: c++ Variable Declarations Fundamental Types
 ---
 
 <TopToggleContent title="变量定义(Variable Declarations)">

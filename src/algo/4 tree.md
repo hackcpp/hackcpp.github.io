@@ -8,8 +8,7 @@ tag:
   - 二叉树
 editLink: false
 description: "非线性数据结构，二叉树（binary tree）"
-star: 904
-sticky: 904
+sticky: 506
 ---
 
 ## 二叉树
