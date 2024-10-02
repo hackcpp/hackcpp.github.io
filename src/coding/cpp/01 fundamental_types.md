@@ -125,19 +125,24 @@ tag:
         <li> char 类型的大小为1 byte</li>
         </template>
         <template v-slot:left-bottom>
+        <CodeBox link="https://pythontutor.com/render.html#code=%23include%20%3Ciostream%3E%0Ausing%20namespace%20std%3B%20%0Aint%20main%20()%20%7B%0A%20%20cout%20%3C%3C%20sizeof(char)%20%3C%3C%20%22%5Cn%22%3B%20%20%20%2F%2F%201%0A%20%20cout%20%3C%3C%20sizeof(bool)%20%3C%3C%20%22%5Cn%22%3B%20%20%20%2F%2F%201%0A%20%20cout%20%3C%3C%20sizeof(short)%20%3C%3C%20%22%5Cn%22%3B%20%20%2F%2F%202%0A%20%20cout%20%3C%3C%20sizeof(int)%20%3C%3C%20%22%5Cn%22%3B%20%20%20%20%2F%2F%204%0A%20%20cout%20%3C%3C%20sizeof(long)%20%3C%3C%20%22%5Cn%22%3B%20%20%20%2F%2F%208%0A%0A%20%20char%20%20%20c%20%3D%20'A'%3B%0A%20%20bool%20%20%20b%20%3D%20true%3B%0A%20%20int%20%20%20%20i%20%3D%201234%3B%0A%20%20long%20%20%20l%20%3D%2012%3B%0A%20%20short%20%20s%20%3D%208%3B%0A%20%20return%200%3B%0A%7D&cumulative=false&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=cpp_g%2B%2B9.3.0&rawInputLstJSON=%5B%5D&textReferences=false">
+        <template v-slot:code>
 <pre>cout << sizeof(char);   // 1
 cout << sizeof(bool);   // 1
 cout << sizeof(short);  // 2
 cout << sizeof(int);    // 4
 cout << sizeof(long);   // 8
-          <br/>
+<hr/>
 <span style="color:dimgray;">// number of bits in a char</span>
 cout << CHAR_BIT;       // 8
+<hr/>
 <span style="color:orange;">char   c = 'A';</span>
 <span style="color:red;">bool   b = true;</span>
 <span style="color:blue;">int    i = 1234;</span>
 <span style="color:purple;">long   l = 12;</span>
 <span style="color:green;">short  s = 8;</span></pre>
+        </template>
+        </CodeBox>
         </template>
         <template v-slot:right>
         <img src="https://hackingcpp.com/cpp/lang/fundamental_type_sizes.svg">
@@ -350,8 +355,8 @@ std::uint8_t b3 = (1 <ColorSpan data="<<"/> 4);  // 16      0001 0000</pre>
       <template v-slot:toggle>
 <pre><ColorSpan data="enum class" color="red"/> day { mon, tue, wed, thu, fri, sat, sun };
 day d = day::mon;      
-d = day::tue;   
-d = wed;        //  <ColorSpan data="COMPILER ERROR: 'wed' only known in day's scope" color="red"/> </pre>
+d = day::tue;   <ColorSpan data="//" color="dimgray"/> <RightSpan/>
+d = wed;        <ColorSpan data="//" color="dimgray"/> <RightSpan type="wrong"/> <ColorSpan data="COMPILER ERROR: 'wed' only known in day's scope" color="red"/> </pre>
       </template>
       <template v-slot:display>
         <div>
@@ -392,7 +397,7 @@ d = wed;        //  <ColorSpan data="COMPILER ERROR: 'wed' only known in day's s
       <pre>int i = 0;
 cin >> i;
 int <ColorSpan data="const" color="red"/> k = i;  <ColorSpan data='// "int constant"' color="dimgray"/>
-k = 5;            //  <ColorSpan data="COMPILER ERROR: k is const!" color="red"/></pre>
+k = 5;            <ColorSpan data="//" color="dimgray"/> <RightSpan type="wrong"/>  <ColorSpan data="COMPILER ERROR: k is const!" color="red"/></pre>
       </template>
       <template v-slot:display>
       <strong>Type</strong> <ColorSpan data="const" color="red"/> variable_name = value;
@@ -440,6 +445,7 @@ import TopToggleContent from "@TopToggleContent";
 import LeftRightLayout from "@LeftRightLayout";
 import ColorSpan from "@ColorSpan";
 import CodeBox from "@CodeBox";
+import RightSpan from "@RightSpan";
 
 
 </script>

@@ -86,16 +86,20 @@ int <strong>main</strong> () {
 <TopToggleContent title="参数(Parameters)">
   <template v-slot:toggle>
     <ToggleContent title="常量参数(const Parameters)">
+     <template v-slot:display>
+      <li> 用const 修饰的参数在函数体无法对其做修改</li>
+     </template>
       <template v-slot:toggle>
         <CodeBox>
           <template v-slot:code>
-          <pre>int foo (int a, int const b) {
-  a += 5;   // 
-  b += 10;  //  COMPILER ERROR: can't modify const parameter
+          <pre>int <strong>foo</strong> (int a, int <ColorSpan data="const" color="red"/> b) {
+  a += 5;   //<RightSpan/>
+  b += 10;  //<RightSpan type="wrong"/> <ColorSpan data="COMPILER ERROR: can't modify const parameter" color="red"/>
   return (a + b);
 }
-// calling foo:
-foo(2,9);  // const has no effect here</pre>
+<hr/>
+<ColorSpan color="dimgray" data="// calling foo:"/>
+foo(2,9);  <ColorSpan color="dimgray" data="// const has no effect here"/></pre>
           </template>
         </CodeBox>
       </template>
@@ -105,17 +109,20 @@ foo(2,9);  // const has no effect here</pre>
       <template v-slot:toggle>
         <CodeBox>
           <template v-slot:code>
-          <pre>double f (double a, double b = 1.5) {
+          <pre>double <strong>f</strong> (double a, double b <ColorSpan data="= 1.5" color="red"/>) {
   return (a * b);
 }
-int main () {
-  cout <<  f(2);     // 1 argument  → 3.0
-  cout <<  f(2, 3);  // 2 arguments → 6.0
+<hr/>
+int <strong>main</strong> () {
+  cout <<  f(2);     <ColorSpan color="dimgray" data="// 1 argument  → 3.0"/>
+  cout <<  f(2, <ColorSpan data="3" color="red"/>);  <ColorSpan color="dimgray" data="// 2 arguments → 6.0"/>
 }
-void foo (int i = 0);  
-void foo (int n, double x = 2.5);  
-void foo (int a, int b = 1, float c = 3.5f);  
-void foo (int a, int b = 1, int c ); </pre>
+<hr/>
+void <strong>foo</strong> (int i <ColorSpan color="green" data="= 0"/>);  <RightSpan/>
+void <strong>foo</strong> (int n, double x <ColorSpan color="green" data="= 2.5"/>);  <RightSpan/>
+void <strong>foo</strong> (int a, int b <ColorSpan color="green" data="= 1"/>, float c <ColorSpan color="green" data="= 3.5f"/>);  <RightSpan/>
+void <strong>foo</strong> (int a, int b <ColorSpan color="red" data="= 1"/>, int c ); <RightSpan type="wrong"/><hr>
+&#10071; <strong>在第一个默认参数之后的每个参数都必须是默认参数!</strong></pre>
           </template>
         </CodeBox>
       </template>
@@ -129,5 +136,6 @@ import TopToggleContent from "@TopToggleContent";
 import LeftRightLayout from "@LeftRightLayout";
 import ColorSpan from "@ColorSpan";
 import CodeBox from "@CodeBox";
+import RightSpan from "@RightSpan";
 
 </script>
