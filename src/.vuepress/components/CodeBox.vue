@@ -3,6 +3,7 @@
       <div class="toolbar">
         <HopeIcon icon="fas fa-play" @click="handleClick" class="icon"/> 
       </div>
+      <hr/> 
       <slot name="code"></slot>
     </div>
   </template>
@@ -26,7 +27,7 @@
   
   <style scoped>
   .code-box {
-    background-color:antiquewhite;
+    background-color:#f8f8f5;
   }
   .toolbar {
     display: flex;

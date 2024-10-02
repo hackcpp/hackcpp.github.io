@@ -1,7 +1,7 @@
   <template>
     <div class="toggle-container">
       <div class="display-view" @click="toggleVisibility">
-        <div class="display-title-box">
+        <div v-if="needToggle" class="display-title-box">
           <div class="display-title">
             <span> {{title}} </span>
           </div> 
@@ -37,7 +37,12 @@
         this.isHidden = !this.isHidden;
         this.icon = this.isHidden ? 'fas fa-chevron-right' : 'fas fa-chevron-down';
       }
-    }
+    },
+    computed: {
+      needToggle() {
+        return this.$props.title !== '';
+      },
+    },
   };
   </script>
   
@@ -62,10 +67,12 @@
     padding-top: 5px;
   }
   .toggle-view {
-    background-color:antiquewhite;
-    border-top: 1px dashed gray;
+    background-color:#f8f8f5;
+    border-top: 1px solid gray;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
+
+    padding-left: 10px;
   }
   </style>
   

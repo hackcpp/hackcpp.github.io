@@ -23,6 +23,7 @@ export default sidebar({
           children: [
             "01 fundamental_types.md",
             "02 control_flow.md",
+            "03 functions.md",
           ],
         },
       ],

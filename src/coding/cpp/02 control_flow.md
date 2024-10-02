@@ -40,6 +40,7 @@ cin >> i;
 <ColorSpan data="else" color="red"/> {
   <ColorSpan data="// otherwise do this" color="dimgray"/>
 }</pre>
+<hr/>
 <li>如果条件满足则执行，否则不执行</li>
 <li>条件表达式为 bool 或可以转化成 bool 类型</li>
 <li>从上到下依次比较每个if</li>
@@ -57,10 +58,10 @@ cin >> i;
         <pre>
 int i = 8;
 int j = i > 10 <ColorSpan data="?" color="red"/> 1 <ColorSpan data=":" color="red"/> 2;         j: 2
-<br/> 
+<hr/> 
 int k = 20;
 int l = (k > 10) <ColorSpan data="?" color="red"/> 1 <ColorSpan data=":" color="red"/> 2;       l: 1
-<br/> 
+<hr/> 
 int b = true;
 double d =  b <ColorSpan data="?" color="red"/> 2.0 <ColorSpan data=":" color="red"/> 0.5;      d: 2.0
 double e = !b <ColorSpan data="?" color="red"/> 2.0 <ColorSpan data=":" color="red"/> 0.5;      e: 0.5
@@ -69,6 +70,7 @@ double e = !b <ColorSpan data="?" color="red"/> 2.0 <ColorSpan data=":" color="r
         </CodeBox>
       </template>
     </ToggleContent>
+    <br/>
     <ToggleContent title="switch 语句块">
       <template v-slot:display>
       <li>支持整数类型 (char, int, long, enums, …)</li>
@@ -116,8 +118,8 @@ int m = i % 5;
     <hr/>
     <ToggleContent title="for Range">
       <template v-slot:display>
-      <ColorSpan data="for" color="red"/> (variable <ColorSpan data="for" color=":"/> range) { … }
-      <li>range = object with standard iterator interface, e.g., std::vector</li>
+      <ColorSpan data="for" color="red"/> (variable <ColorSpan data=":" color="red"/> range) { … }
+      <li>遍历容器中的元素, e.g., std::vector</li>
       </template>
       <template v-slot:toggle>
       <CodeBox link="https://pythontutor.com/render.html#code=%23include%20%3Ciostream%3E%0A%23include%20%3Cvector%3E%0Aint%20main()%20%7B%20%0A%20%20std%3A%3Avector%3Cint%3E%20v%20%7B1%2C2%2C3%2C4%2C5%7D%3B%0A%20%20%2F%2F%20print%20all%20elements%20of%20vector%20to%20console%0A%20%20for%20(int%20x%20%3A%20v)%20%20%7B%20std%3A%3Acout%20%3C%3C%20x%20%3C%3C%20'%20'%3B%20%7D%0A%20%20return%200%3B%0A%7D&cumulative=false&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=cpp_g%2B%2B9.3.0&rawInputLstJSON=%5B%5D&textReferences=false">

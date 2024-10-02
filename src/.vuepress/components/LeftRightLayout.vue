@@ -4,7 +4,7 @@
       <div class="upper-part">
         <slot name="left-top"></slot>
       </div>
-      <div class="lower-part">
+      <div v-if="!leftBottomHidden" class="lower-part">
         <slot name="left-bottom"></slot>
       </div>
     </div>
@@ -17,6 +17,17 @@
 <script>
   export default {
     name: 'LeftRightLayout',
+    props: {
+      leftBottom: {
+        type: String,
+        default: "",
+      }
+    },
+    computed: {
+      leftBottomHidden() {
+        return this.$props.leftBottom === "hidden";
+      }
+    },
   };
 </script>
   
@@ -56,9 +67,10 @@
 }
 .lower-part {
   flex: auto;
-  background-color:antiquewhite;
+  background-color:#f8f8f5;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
+  border-top: 1px solid gray;
 }
 
 </style>

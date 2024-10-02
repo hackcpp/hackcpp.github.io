@@ -166,7 +166,7 @@ cout << CHAR_BIT;       // 8
         <template v-slot:code>
 <pre>int a = 4;          设置变量 a 值为 4
 int b = 3;          设置变量 b 值为 3
-<br/>
+<hr/>
 a = a <span style="color:red;">+</span> b;          a: 7    add
 a <span style="color:red;">+=</span> b;             a: 10
 a = a <span style="color:red;">-</span> b;          a: 7    subtract
@@ -192,7 +192,7 @@ a = a <span style="color:red;">%</span> b;          a: 1    remainder of divisio
       <template v-slot:code>
 <pre>int a = 4;    a: 4           
 int b = 3;            b: 3
-<br/>
+<hr/>
 b = a<span style="color:blue;">++</span>;      a: 5    b: 4
 b = <span style="color:red;">++</span>a;      a: 6    b: 6
 b = <span style="color:red;">--</span>a;      a: 5    b: 5
@@ -216,7 +216,7 @@ b = a<span style="color:blue;">--</span>;      a: 4    b: 5</pre>
         <template v-slot:code>
       <pre>int x = 10;                       
 int y = 5;                 result  operator
-<br/>
+<hr/>
 bool b1 =  x <ColorSpan data="==" color="red"/> 5;         false   equals     
 bool b2 = (x <ColorSpan data="!=" color="red"/> 6);        true    not equal       
 bool b3 = x <ColorSpan data=">" color="red"/> y;           true    greater     
@@ -254,11 +254,11 @@ bool b6 = x <ColorSpan data="<=" color="red"/> 30;         true    smaller/equal
       <template v-slot:code>
       <pre>bool a = <span style="color:blue;">true</span>;
 bool b = <span style="color:blue;">false</span>;
-<br>
+<hr/>
 bool c = a <span style="color:red;">&& </span>b;      <span style="color:dimgray;">// false    logical AND</span>
 bool d = a <span style="color:red;">||</span> b;      <span style="color:dimgray;">// true     logical OR</span>
 bool e = <span style="color:red;">!</span>a;          <span style="color:dimgray;">// false    logical NOT</span>
-<br>
+<hr/>
 <span style="color:dimgray;">Alternative Spellings:</span>
 bool x = a <span style="color:red;">and</span> b;     <span style="color:dimgray;">// false</span>
 bool y = a <span style="color:red;">or</span> b;     <span style="color:dimgray;"> // true</span>
@@ -300,16 +300,15 @@ bool h = 1.2;  <span style="color:dimgray;">// true   (double → bool)</span></
       <CodeBox link="https://pythontutor.com/render.html#code=%23include%20%3Ccstdint%3E%0Aint%20main()%20%7B%0A%20%20std%3A%3Auint8_t%20a%20%3D%206%3B%20%20%0A%20%20std%3A%3Auint8_t%20b%20%3D%200b00001011%3B%0A%20%20std%3A%3Auint8_t%20c1%20%3D%20(a%20%26%20b)%3B%20%20%2F%2F%202%0A%20%20std%3A%3Auint8_t%20c2%20%3D%20(a%20%7C%20b)%3B%20%20%2F%2F%2015%0A%20%20std%3A%3Auint8_t%20c3%20%3D%20(a%20%5E%20b)%3B%20%20%2F%2F%2013%0A%20%20std%3A%3Auint8_t%20c4%20%3D%20~a%3B%20%20%20%20%20%20%20%2F%2F%20249%0A%20%20std%3A%3Auint8_t%20c5%20%3D%20~b%3B%20%20%20%20%20%20%20%2F%2F%20244%0A%20%20%2F%2F%20test%20if%20int%20is%20even%2Fodd%3A%0A%20%20bool%20a_odd%20%20%3D%20a%20%26%201%3B%0A%20%20bool%20a_even%20%3D%20!(a%20%26%201)%3B%20%20%20%20%20%20%20%20%0A%20%20return%200%3B%0A%7D&cumulative=false&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=cpp_g%2B%2B9.3.0&rawInputLstJSON=%5B%5D&textReferences=false">
       <template v-slot:code>
 <pre>                                      memory bits:
-<br/>
 std::uint8_t a = 6;                   0000 0110
 std::uint8_t b = 0b00001011;          0000 1011
-<br/>
+<hr/>
 std::uint8_t c1 = (a <ColorSpan data="&" color="red"/> b);  // 2      0000 0010
 std::uint8_t c2 = (a <ColorSpan data="|" color="red"/> b);  // 15     0000 1111
 std::uint8_t c3 = (a <ColorSpan data="^" color="red"/> b);  // 13     0000 1101
 std::uint8_t c4 = <ColorSpan data="~" color="red"/>a;       // 249    1111 1001
 std::uint8_t c5 = <ColorSpan data="~" color="red"/>b;       // 244    1111 0100
-<br/>
+<hr/>
 // test if int is even/odd:           result:
 bool a_odd  = a & 1;                  0 ⇒ false
 bool a_even = !(a & 1);               1 ⇒ true</pre>
@@ -330,10 +329,10 @@ bool a_even = !(a & 1);               1 ⇒ true</pre>
         <template v-slot:code>
 <pre>                                        memory bits:
 std::uint8_t a = 1;                     0000 0001
-<br/>
+<hr/>
 a <ColorSpan data="<<=" color="red"/> 6;  // 64                         0100 0000
 a <ColorSpan data=">>=" color="red"/> 4;  // 4                          0000 0100
-<br/>
+<hr/>
 std::uint8_t b1 = (1 <ColorSpan data="<<"/> 1);  // 2       0000 0010
 std::uint8_t b2 = (1 <ColorSpan data="<<"/> 2);  // 4       0000 0100
 std::uint8_t b3 = (1 <ColorSpan data="<<"/> 4);  // 16      0001 0000</pre>
@@ -426,7 +425,7 @@ k = 5;            //  <ColorSpan data="COMPILER ERROR: k is const!" color="red"/
 <strong>auto</strong> d = 2.023;               <ColorSpan data="double"/>     
 <strong>auto</strong> f = 4.01f;               <ColorSpan data="float"/>   
 <strong>auto</strong> l = -78787879797878l;    <ColorSpan data="long int"/> 
-<br/>
+<hr/>
 <strong>auto</strong> x = 0 * i;               x: <ColorSpan data="int"/> 
 <strong>auto</strong> y = i + d;               y: <ColorSpan data="double"/>   
 <strong>auto</strong> z = f * d;               z: <ColorSpan data="double"/> </pre>
