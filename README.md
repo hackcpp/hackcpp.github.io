@@ -1,4 +1,4 @@
-本项目是基于 vuepress 2.0.0-rc.14 搭建的 c++ 编程知识库。[在线阅读](https://lucas-hliu.github.io)
+本项目是基于 vuepress 2.0.0-rc.14 搭建的 c++ 编程知识库。[在线阅读](https://hackcpp.github.io)
 
 ### 环境要求
 - nodejs 版本 >= 18.x
