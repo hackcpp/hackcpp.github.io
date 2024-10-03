@@ -1,9 +1,9 @@
   <template>
     <div class="code-box"> 
       <div class="toolbar">
-         <span v-if="showTip" >{{tip}}</span>
-        <HopeIcon icon="fas fa-copy" @click="handleCopyClick" class="icon"/> 
-        <HopeIcon icon="fas fa-play" @click="handleRunClick" class="icon"/> 
+        <span v-if="showTip" ><strong>code has been copied to the clipboard.</strong></span>
+        <TipIcon icon="fas fa-copy" tip="copy" @click="handleCopyClick"/>
+        <TipIcon icon="fas fa-play" tip="run" @click="handleRunClick"/>
       </div>
       <hr/> 
       <slot name="code"></slot>
@@ -11,8 +11,12 @@
   </template>
   
   <script>
+  import TipIcon from '@TipIcon';
   export default {
     name: 'CodeBox',
+    components: {
+      TipIcon,
+    },
     props: {
       link: {
         type: String,
@@ -22,7 +26,6 @@
     data() {
       return {
         showTip: false,
-        tip: 'code has been copied to the clipboard.',
       };
     },
     methods: {
@@ -37,7 +40,7 @@
           this.showTip = false;
         }, 1000); 
       }).catch(err => {
-        console.error('复制失败: ', err);
+        console.error('copy failed: ', err);
       });
       },
     },
@@ -63,13 +66,6 @@
     align-items: center;
     gap: 8px;
     justify-content: flex-end;
-  }
-  .icon {
-    font-size: 20px;
-    border-radius: 4px;
-  }
-  .icon:hover {
-    background-color: gray;
   }
 
   </style>

@@ -32,6 +32,7 @@ export default defineUserConfig({
     "@CodeBox": path.resolve(__dirname, "components/CodeBox.vue"),
     "@ColorSpan": path.resolve(__dirname, "components/ColorSpan.vue"),
     "@RightSpan": path.resolve(__dirname, "components/RightSpan.vue"),
+    "@TipIcon": path.resolve(__dirname, "components/TipIcon.vue"),
 
   },
 });
