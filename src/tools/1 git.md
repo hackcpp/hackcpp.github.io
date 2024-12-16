@@ -10,6 +10,19 @@ editLink: false
 
 Git 是最常用的版本控制工具之一，广泛用于开发和项目管理中。以下是一些常用的 Git 命令及其详细说明：
 
+## 配置管理
+### 1. **git config**
+- **作用**：配置 Git 的用户信息。
+- **用法**：`git config --global user.name "your_username"` 设置全局的用户名，`git config --global user.email "your_email"` 设置全局的邮箱地址。
+  
+```bash
+  git config --global user.name "your_username"
+  git config --global user.email "your_email"
+  git config --list  # 查看配置信息
+```
+- **--local:**               当前仓库配置, 对应配置文件`{仓库目录}/.git/config `
+- **--global:**              当前用户配置, 对应配置文件`～/.gitconfig`
+
 ## repository 操作 
 
 ### 1. **git init**
@@ -34,15 +47,40 @@ Git 是最常用的版本控制工具之一，广泛用于开发和项目管理�
   - 查看当前的远程仓库：`git remote -v`
   - 添加新的远程仓库：`git remote add origin https://github.com/user/repo.git`
   - 删除远程仓库：`git remote remove origin`
+  - 修改关联的远程仓库地址：`git remote set-url origin https://github.com/user/repo.git`
 
   ```bash
   git remote -v  # 查看远程仓库
   git remote add origin https://github.com/user/repo.git  # 添加远程仓库
+  git remote set-url origin  https://github.com/user/repo.git # 修改关联的远程仓库地址
   ```
 
 ## 修改管理
+### 1. **git status**
+- **作用**：显示工作目录和暂存区的状态，查看哪些文件有更改、哪些文件被暂存、哪些文件未被跟踪。
+- **用法**：运行 `git status` 可以看到当前分支的状态信息。
+  
+  ```bash
+  git status
+  ```
+### 2. **git diff**
+- **作用**：查看工作目录、暂存区和最新提交之间的差异。
+- **用法**：`git diff` 显示未暂存的更改，`git diff --staged` 显示已暂存但未提交的更改。
 
-### 1. **git add**
+  ```bash
+  git diff
+  git diff --staged
+  ```
+
+### 3. **git restore**
+- **作用**：撤销修改恢复工作目录中的文件。
+- **用法**：`git restore` 后跟文件。
+
+```bash
+  git restore file.txt  # 撤销工作区的文件修改
+  git restore --staged file.txt  # 撤销暂存区的文件修改
+```
+### 4. **git add**
 - **作用**：将文件添加到暂存区（stage），为下次提交做准备。
 - **用法**：`git add` 后跟文件路径，或使用 `.` 添加当前目录下的所有更改。
 
@@ -51,14 +89,14 @@ Git 是最常用的版本控制工具之一，广泛用于开发和项目管理�
   git add .
   ```
 
-### 2. **git commit**
+### 5. **git commit**
 - **作用**：提交暂存区的更改，生成新的提交。
 - **用法**：`git commit` 通常跟 `-m` 选项来添加提交信息，描述本次提交的内容。
 
   ```bash
   git commit -m "Add new feature"
   ```
-- **修改commit信息**： 使用 `--amend` 修改最后一次提交的信息或内容。
+- **修改commit信息**： 使用 `--amend` 修改上一次提交的信息或追加提交内容到上一次的commit。
   
   ```bash
   git commit --amend -m "Corrected commit message"
@@ -69,15 +107,7 @@ Git 是最常用的版本控制工具之一，广泛用于开发和项目管理�
   git rebase -i HEAD～n
   ```
 
-### 3. **git status**
-- **作用**：显示工作目录和暂存区的状态，查看哪些文件有更改、哪些文件被暂存、哪些文件未被跟踪。
-- **用法**：运行 `git status` 可以看到当前分支的状态信息。
-
-  ```bash
-  git status
-  ```
-
-### 4. **git log**
+### 6. **git log**
 - **作用**：显示仓库的提交历史记录。
 - **用法**：`git log` 列出当前分支的所有提交。你可以使用 `--oneline` 选项简化输出，或者 `--graph` 查看分支图形。
 
@@ -87,23 +117,6 @@ Git 是最常用的版本控制工具之一，广泛用于开发和项目管理�
   git log --graph --oneline
   ```
 
-### 5. **git diff**
-- **作用**：查看工作目录、暂存区和最新提交之间的差异。
-- **用法**：`git diff` 显示未暂存的更改，`git diff --staged` 显示已暂存但未提交的更改。
-
-  ```bash
-  git diff
-  git diff --staged
-  ```
-
-### 6. **git checkout**
-- **作用**：恢复工作目录中文件的状态。
-- **用法**：`git checkout --` 后跟文件。
-
-```bash
-  git checkout feature-branch
-  git checkout -- file.txt  # 恢复文件
-```
 ### 7. **git stash**
 - **作用**：保存当前工作目录的更改，以便稍后恢复，而不影响当前的代码提交历史。
 - **用法**：`git stash` 可以在不提交代码的情况下保存未完成的工作。
@@ -116,14 +129,21 @@ Git 是最常用的版本控制工具之一，广泛用于开发和项目管理�
 ### 8. **git reset**
 - **作用**：重置当前分支的提交历史或工作目录状态，回退到之前的某个提交点。
 - **用法**：
-  - `git reset --soft`：保留工作区文件，只回退提交。
+  - `git reset --soft`：保留文件修改在缓存区，只回退提交并删除commit记录。
   - `git reset --hard`：丢弃工作区文件和提交历史。
 
   ```bash
   git reset --soft HEAD~1  # 回退一提交，但保留工作目录更改
   git reset --hard HEAD~1  # 丢弃更改
   ```
+### 8. **git revert**
+- **作用**：撤销上一次的修改，但会保留上一次的commit 记录并产生一条新的 revert commit 记录。
+- **用法**：
+  - `git revert `：撤销上一次的修改。
 
+  ```bash
+  git revert commitid  # 撤销上一次的修改
+  ```
 ## 分支管理
 
 ### 1. **git checkout**
@@ -143,7 +163,8 @@ Git 是最常用的版本控制工具之一，广泛用于开发和项目管理�
   - 删除分支：`git branch -d branch_name`
 
   ```bash
-  git branch  # 列出所有分支
+  git branch      # 列出本地所有分支
+  git branch -r   # 列出远程所有分支
   git branch feature-branch  # 创建新分支
   git branch -d feature-branch  # 删除分支
   ```
